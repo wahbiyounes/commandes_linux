@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index des Cours</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:linear-gradient(135deg, #0f172a, #1e293b);
+            padding:20px;
+        }
+
+        .container{
+            width:100%;
+            max-width:800px;
+            background:rgba(255,255,255,0.08);
+            backdrop-filter:blur(10px);
+            border:1px solid rgba(255,255,255,0.1);
+            border-radius:20px;
+            padding:40px;
+            box-shadow:0 10px 30px rgba(0,0,0,0.4);
+        }
+
+        .title{
+            text-align:center;
+            color:white;
+            margin-bottom:35px;
+            font-size:32px;
+            letter-spacing:1px;
+        }
+
+        .links{
+            display:flex;
+            flex-direction:column;
+            gap:20px;
+        }
+
+        .card{
+            background:rgba(255,255,255,0.05);
+            border:1px solid rgba(255,255,255,0.08);
+            border-radius:15px;
+            transition:0.3s;
+            overflow:hidden;
+        }
+
+        .card:hover{
+            transform:translateY(-5px);
+            background:rgba(255,255,255,0.12);
+            box-shadow:0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .card a{
+            display:block;
+            padding:22px;
+            text-decoration:none;
+            color:white;
+            font-size:20px;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        .card a:hover{
+            color:#38bdf8;
+        }
+
+        .footer{
+            margin-top:30px;
+            text-align:center;
+            color:#cbd5e1;
+            font-size:14px;
+        }
+
+        @media(max-width:600px){
+
+            .container{
+                padding:25px;
+            }
+
+            .title{
+                font-size:25px;
+            }
+
+            .card a{
+                font-size:17px;
+                padding:18px;
+            }
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <h1 class="title">Mes Résumés & Commandes</h1>
+
+        <div class="links">
+
+            <div class="card">
+                <a href="agile.html">
+                    📘 Résumé du cours Approche Agile
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="attaks-DVWA.html">
+                    💻 Commandes pour les Attacks DVWA
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="commandes_Git.html">
+                    🔧 Résumé des Commandes Git
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="Commandes-linux.html">
+                    🐧 Commandes Linux les plus Utilisées
+                </a>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            Créé par Younes 🚀
+        </div>
+
+    </div>
+
+</body>
+</html>

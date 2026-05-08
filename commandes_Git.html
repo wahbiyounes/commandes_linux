@@ -59,8 +59,231 @@
 </head>
 <body>
 
-  <h1>Les Commandes Git Essentielles</h1>
+  <div class="container">
+    <h1>Guide Complet des Commandes Git & GitHub</h1>
 
+    <!-- CONFIGURATION -->
+
+    <h2>1. Configuration Git</h2>
+
+    <table>
+      <tr>
+      <th>Commande</th>
+      <th>Description</th>
+      </tr>
+
+      <tr>
+      <td><code>git config --global user.name "Younes"</code></td>
+      <td>Définir le nom utilisateur Git.</td>
+      </tr>
+
+      <tr>
+      <td><code>git config --global user.email "email@gmail.com"</code></td>
+      <td>Définir l’adresse email Git.</td>
+      </tr>
+
+      <tr>
+      <td><code>git config --list</code></td>
+      <td>Afficher la configuration actuelle.</td>
+      </tr>
+    </table>
+
+    <!-- INITIALISATION -->
+
+    <h2>2. Initialiser un Projet Git</h2>
+
+    <table>
+      <tr>
+      <th>Commande</th>
+      <th>Description</th>
+      </tr>
+
+      <tr>
+      <td><code>git init</code></td>
+      <td>Initialiser Git dans le dossier du projet.</td>
+      </tr>
+
+    <tr>
+      <td><code>git status</code></td>
+      <td>Afficher l’état des fichiers.</td>
+    </tr>
+  </table>
+
+  <!-- AJOUT -->
+
+  <h2>3. Ajouter les Fichiers</h2>
+
+  <table>
+    <tr>
+      <th>Commande</th>
+      <th>Description</th>
+    </tr>
+
+    <tr>
+      <td><code>git add .</code></td>
+      <td>Ajouter tous les fichiers.</td>
+    </tr>
+
+    <tr>
+      <td><code>git add nom_fichier</code></td>
+      <td>Ajouter un seul fichier.</td>
+    </tr>
+  </table>
+
+  <!-- COMMIT -->
+
+  <h2>4. Faire un Commit</h2>
+
+  <table>
+    <tr>
+      <th>Commande</th>
+      <th>Description</th>
+    </tr>
+
+    <tr>
+      <td><code>git commit -m "Premier commit"</code></td>
+      <td>Créer une sauvegarde avec message.</td>
+    </tr>
+
+    <tr>
+      <td><code>git log</code></td>
+      <td>Afficher l’historique des commits.</td>
+    </tr>
+
+    <tr>
+      <td><code>git diff</code></td>
+      <td>Afficher les modifications.</td>
+    </tr>
+  </table>
+
+  <!-- GITHUB -->
+
+  <h2>5. Connecter le Projet à GitHub</h2>
+
+  <table>
+    <tr>
+      <th>Commande</th>
+      <th>Description</th>
+    </tr>
+
+    <tr>
+      <td>
+        <code>
+              git remote add origin https://github.com/USERNAME/PROJET.git
+        </code>
+      </td>
+      <td>Connecter le projet local avec GitHub.</td>
+    </tr>
+
+    <tr>
+      <td><code>git branch -M main</code></td>
+      <td>Créer ou renommer la branche principale en main.</td>
+    </tr>
+
+    <tr>
+      <td><code>git push -u origin main</code></td>
+      <td>Envoyer le projet vers GitHub.</td>
+    </tr>
+  </table>
+
+  <!-- MISE A JOUR -->
+
+  <h2>6. Mettre à Jour le Projet</h2>
+
+  <table>
+    <tr>
+      <th>Commande</th>
+      <th>Description</th>
+    </tr>
+
+    <tr>
+      <td><code>git pull</code></td>
+      <td>Récupérer les dernières modifications.</td>
+    </tr>
+
+    <tr>
+      <td><code>git push</code></td>
+      <td>Envoyer les nouvelles modifications.</td>
+    </tr>
+  </table>
+
+  <!-- BRANCHES -->
+
+  <h2>7. Gestion des Branches</h2>
+
+  <table>
+    <tr>
+      <th>Commande</th>
+      <th>Description</th>
+    </tr>
+
+    <tr>
+      <td><code>git branch</code></td>
+      <td>Afficher les branches.</td>
+    </tr>
+
+    <tr>
+      <td><code>git branch nouvelle_branche</code></td>
+      <td>Créer une branche.</td>
+    </tr>
+
+    <tr>
+      <td><code>git checkout nouvelle_branche</code></td>
+      <td>Changer de branche.</td>
+    </tr>
+
+    <tr>
+      <td><code>git checkout -b nouvelle_branche</code></td>
+      <td>Créer et changer de branche.</td>
+    </tr>
+
+    <tr>
+      <td><code>git merge nom_branche</code></td>
+      <td>Fusionner une branche.</td>
+    </tr>
+  </table>
+
+  <!-- RESTORE -->
+
+  <h2>8. Restaurer ou Annuler</h2>
+
+  <table>
+    <tr>
+      <th>Commande</th>
+      <th>Description</th>
+    </tr>
+
+    <tr>
+      <td><code>git restore nom_fichier</code></td>
+      <td>Annuler les modifications d’un fichier.</td>
+    </tr>
+  </table>
+
+  <!-- CLONE -->
+
+  <h2>9. Copier un Projet GitHub</h2>
+
+  <table>
+    <tr>
+      <th>Commande</th>
+      <th>Description</th>
+    </tr>
+
+    <tr>
+      <td><code>git clone URL</code></td>
+      <td>Copier un projet GitHub vers le PC.</td>
+    </tr>
+  </table>
+<br><br>
+  <div class="note">
+    <strong>Workflow rapide :</strong><br><br>
+
+    <code>git add .</code><br><br>
+    <code>git commit -m "message"</code><br><br>
+    <code>git push</code>
+  </div><br><br>
+  
+<h1>Les Commandes Git Essentielles</h1>
   <table>
     <tr>
       <th>Commande</th>
@@ -158,6 +381,6 @@
     </tr>
 
   </table>
-
+</div>
 </body>
 </html>
