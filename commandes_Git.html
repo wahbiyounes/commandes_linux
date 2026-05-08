@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Commandes Git</title>
+
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      background:#f4f6f9;
+      margin:0;
+      padding:30px;
+    }
+
+    h1{
+      text-align:center;
+      color:#222;
+      margin-bottom:30px;
+    }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      background:white;
+      box-shadow:0 0 10px rgba(0,0,0,0.1);
+    }
+
+    th{
+      background:#24292e;
+      color:white;
+      padding:15px;
+      font-size:18px;
+    }
+
+    td{
+      border:1px solid #ddd;
+      padding:12px;
+      font-size:15px;
+    }
+
+    tr:nth-child(even){
+      background:#f2f2f2;
+    }
+
+    tr:hover{
+      background:#e8f0fe;
+      transition:0.3s;
+    }
+
+    code{
+      background:#eee;
+      padding:3px 6px;
+      border-radius:5px;
+      color:#c7254e;
+      font-weight:bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Les Commandes Git Essentielles</h1>
+
+  <table>
+    <tr>
+      <th>Commande</th>
+      <th>Description</th>
+    </tr>
+
+    <tr>
+      <td><code>git init</code></td>
+      <td>Initialiser Git dans un projet.</td>
+    </tr>
+
+    <tr>
+      <td><code>git status</code></td>
+      <td>Afficher l’état des fichiers modifiés.</td>
+    </tr>
+
+    <tr>
+      <td><code>git add .</code></td>
+      <td>Ajouter tous les fichiers avant le commit.</td>
+    </tr>
+
+    <tr>
+      <td><code>git add nom_fichier</code></td>
+      <td>Ajouter un seul fichier.</td>
+    </tr>
+
+    <tr>
+      <td><code>git commit -m "message"</code></td>
+      <td>Créer une sauvegarde avec un message.</td>
+    </tr>
+
+    <tr>
+      <td><code>git log</code></td>
+      <td>Afficher l’historique des commits.</td>
+    </tr>
+
+    <tr>
+      <td><code>git diff</code></td>
+      <td>Afficher les modifications avant commit.</td>
+    </tr>
+
+    <tr>
+      <td><code>git restore nom_fichier</code></td>
+      <td>Annuler les modifications d’un fichier.</td>
+    </tr>
+
+    <tr>
+      <td><code>git branch</code></td>
+      <td>Afficher les branches du projet.</td>
+    </tr>
+
+    <tr>
+      <td><code>git branch nom_branche</code></td>
+      <td>Créer une nouvelle branche.</td>
+    </tr>
+
+    <tr>
+      <td><code>git checkout nom_branche</code></td>
+      <td>Changer de branche.</td>
+    </tr>
+
+    <tr>
+      <td><code>git checkout -b nom_branche</code></td>
+      <td>Créer et changer de branche directement.</td>
+    </tr>
+
+    <tr>
+      <td><code>git merge nom_branche</code></td>
+      <td>Fusionner une branche avec la branche actuelle.</td>
+    </tr>
+
+    <tr>
+      <td><code>git clone URL</code></td>
+      <td>Copier un projet GitHub vers le PC.</td>
+    </tr>
+
+    <tr>
+      <td><code>git pull</code></td>
+      <td>Récupérer les dernières modifications du serveur.</td>
+    </tr>
+
+    <tr>
+      <td><code>git push</code></td>
+      <td>Envoyer les modifications vers GitHub.</td>
+    </tr>
+
+    <tr>
+      <td><code>git remote add origin URL</code></td>
+      <td>Connecter le projet local avec GitHub.</td>
+    </tr>
+
+    <tr>
+      <td><code>git config --list</code></td>
+      <td>Afficher la configuration Git.</td>
+    </tr>
+
+  </table>
+
+</body>
+</html>

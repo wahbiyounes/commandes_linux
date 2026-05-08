@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résumé Cours - Approche Agile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #f8fafc; font-family: 'Inter', sans-serif; }
+        .agile-card { transition: transform 0.2s; }
+        .agile-card:hover { transform: translateY(-5px); }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <header class="bg-indigo-700 text-white py-12 shadow-lg mb-10">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl font-extrabold mb-2 uppercase tracking-widest">Résumé Cours : Approche Agile</h1>
+            <p class="text-indigo-100 italic">ISGI Marrakech - Développement Web Full Stack</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 pb-20">
+        
+        <section class="mb-12">
+            <div class="flex items-center mb-6 text-indigo-700">
+                <i class="fas fa-book-open text-2xl mr-3"></i>
+                <h2 class="text-2xl font-bold border-b-2 border-indigo-200 pb-1">Introduction & Définitions</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-indigo-500">
+                    <h3 class="font-bold text-lg mb-2">Objectifs du cours</h3>
+                    <ul class="list-disc ml-5 space-y-2 text-gray-600">
+                        <li>Connaître les fondamentaux de la gestion de projet.</li>
+                        <li>Adapter l'approche Agile (Scrum/Jira).</li>
+                        <li>Mise en œuvre des outils de versioning (Git/GitLab).</li>
+                        <li>Qualité du code (SonarQube) et chaîne DevOps (CI/CD).</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-green-500">
+                    <h3 class="font-bold text-lg mb-2">Concepts Clés</h3>
+                    <p class="mb-2"><strong>Projet :</strong> Ensemble d'actions pour répondre à un besoin dans un délai, ressources et budget définis.</p>
+                    <p class="mb-2"><strong>Gestion de projet :</strong> Action temporaire mobilisant des ressources pour organiser le déroulement du projet.</p>
+                    <p><strong>Charte de projet :</strong> Document formel décrivant le projet, ses objectifs et les parties prenantes.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <div class="flex items-center mb-6 text-indigo-700">
+                <i class="fas fa-layer-group text-2xl mr-3"></i>
+                <h2 class="text-2xl font-bold border-b-2 border-indigo-200 pb-1">Méthodes de Gestion de Projet</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-orange-50 p-6 rounded-xl border border-orange-200">
+                    <h3 class="font-bold text-orange-700 text-xl mb-3">1. Méthodes Prévisibles (Traditionnelles)</h3>
+                    <p class="font-semibold text-gray-700">Modèles : Cascade (Waterfall), Cycle en V</p>
+                    <p class="mt-2 text-gray-600 italic">Structure rigoureuse et traitement séquentiel.</p>
+                </div>
+                <div class="bg-blue-50 p-6 rounded-xl border border-blue-200">
+                    <h3 class="font-bold text-blue-700 text-xl mb-3">2. Méthodes Imprévisibles (Agile)</h3>
+                    <p class="text-gray-700 font-medium">Découpage en sous-parties autonomes (Développement itératif).</p>
+                    <p class="mt-2 text-gray-600 italic font-bold italic underline">Le Manifeste Agile (2001)</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12 bg-indigo-50 p-8 rounded-2xl shadow-inner">
+            <h2 class="text-center text-2xl font-bold text-indigo-900 mb-8 uppercase tracking-wide">Les 4 Valeurs Fondamentales</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-white p-4 rounded-lg shadow-sm flex items-start">
+                    <span class="bg-indigo-600 text-white rounded-full h-8 w-8 flex items-center justify-center mr-3 flex-shrink-0">1</span>
+                    <p><strong>Les individus et leurs interactions</strong> plus que les processus et les outils.</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm flex items-start">
+                    <span class="bg-indigo-600 text-white rounded-full h-8 w-8 flex items-center justify-center mr-3 flex-shrink-0">2</span>
+                    <p><strong>Des logiciels opérationnels</strong> plus qu'une documentation exhaustive.</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm flex items-start">
+                    <span class="bg-indigo-600 text-white rounded-full h-8 w-8 flex items-center justify-center mr-3 flex-shrink-0">3</span>
+                    <p><strong>La collaboration avec les clients</strong> plus que la négociation contractuelle.</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm flex items-start">
+                    <span class="bg-indigo-600 text-white rounded-full h-8 w-8 flex items-center justify-center mr-3 flex-shrink-0">4</span>
+                    <p><strong>L'adaptation au changement</strong> plus que le suivi d'un plan.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <div class="flex items-center mb-6 text-indigo-700">
+                <i class="fas fa-users-cog text-2xl mr-3"></i>
+                <h2 class="text-2xl font-bold border-b-2 border-indigo-200 pb-1">Organisation & Rôles</h2>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm mb-6">
+                <h3 class="font-bold mb-4 text-indigo-600 italic">Chef de Projet Informatique (CPI) / Project Manager</h3>
+                <p>Responsable de l'équipe projet en charge de la préparation, de la réalisation et de la finalisation du projet.</p>
+            </div>
+            
+            <div class="overflow-x-auto shadow-md rounded-lg">
+                <table class="w-full text-left bg-white">
+                    <thead class="bg-gray-800 text-white">
+                        <tr>
+                            <th class="p-4 uppercase text-sm">Lettre</th>
+                            <th class="p-4 uppercase text-sm">Rôle (Matrice RACI)</th>
+                            <th class="p-4 uppercase text-sm">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr>
+                            <td class="p-4 font-bold text-indigo-600 text-xl">R</td>
+                            <td class="p-4 font-semibold">Réalisateur</td>
+                            <td class="p-4 text-gray-600">Réalise la tâche et responsable de son achèvement.</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-bold text-indigo-600 text-xl">A</td>
+                            <td class="p-4 font-semibold">Approbateur</td>
+                            <td class="p-4 text-gray-600">Approuve l'achèvement et prend la décision (1 seul par tâche).</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-bold text-indigo-600 text-xl">C</td>
+                            <td class="p-4 font-semibold">Consulté</td>
+                            <td class="p-4 text-gray-600">Conseille avant décision (Profil expert).</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-bold text-indigo-600 text-xl">I</td>
+                            <td class="p-4 font-semibold">Informé</td>
+                            <td class="p-4 text-gray-600">Informé d'une décision ou d'une action.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="bg-gray-100 p-8 rounded-2xl border-2 border-dashed border-gray-300">
+            <h2 class="text-xl font-bold mb-4 text-gray-700 uppercase tracking-wide"><i class="fas fa-pencil-alt mr-2"></i> Application : Projet Diplôme</h2>
+            <div class="grid md:grid-cols-2 gap-6 text-sm">
+                <div>
+                    <h4 class="font-bold underline mb-2">Objectifs spécifiques :</h4>
+                    <ul class="list-none space-y-1">
+                        <li>✅ Concepts clés : POO, SQL, JS</li>
+                        <li>✅ Organisation du temps</li>
+                        <li>✅ Note cible : 16/20 (Modules Coeff 9)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold underline mb-2">Ressources :</h4>
+                    <p><strong>Humaines :</strong> Formateur, camarades.</p>
+                    <p><strong>Matérielles :</strong> PC, cours, logiciels.</p>
+                    <p><strong>Financières :</strong> Budget connexion.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800 text-white py-6 text-center">
+        <p>Résumé généré pour Younes - ISGI Marrakech &copy; 2026</p>
+    </footer>
+
+</body>
+</html>

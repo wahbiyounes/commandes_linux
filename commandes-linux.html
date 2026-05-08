@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Commandes Linux Pro</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    transition: 0.3s;
+}
+.dark {
+    background: #1e1e1e;
+    color: white;
+}
+h1 {
+    text-align: center;
+}
+.container {
+    width: 90%;
+    margin: auto;
+}
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+button {
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    background: #007BFF;
+    color: white;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+.dark table {
+    background: #2c2c2c;
+}
+th, td {
+    padding: 12px;
+}
+th {
+    background: #007BFF;
+    color: white;
+}
+tr:nth-child(even) {
+    background: #f2f2f2;
+}
+.dark tr:nth-child(even) {
+    background: #3a3a3a;
+}
+tr:hover {
+    background: #d6eaff;
+}
+.dark tr:hover {
+    background: #555;
+}
+.category {
+    font-weight: bold;
+    color: #007BFF;
+}
+code {
+    background: #eee;
+    padding: 3px 6px;
+    border-radius: 5px;
+}
+.dark code {
+    background: #444;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h1>📌 Commandes Linux </h1>
+
+<button onclick="toggleDark()">🌙 Dark Mode</button>
+
+<input type="text" id="search" placeholder="🔍 Rechercher une commande..." onkeyup="searchTable()">
+
+<table id="table">
+<tr>
+    <th>Commande</th>
+    <th>Description</th>
+    <th>Exemple</th>
+    <th>Catégorie</th>
+</tr>
+
+<tr>
+<td><code>ls</code></td>
+<td>Afficher les fichiers</td>
+<td><code>ls -l</code></td>
+<td class="category">Files</td>
+</tr>
+
+<tr>
+<td><code>cd</code></td>
+<td>Changer dossier</td>
+<td><code>cd /home</code></td>
+<td class="category">Files</td>
+</tr>
+
+<tr>
+<td><code>pwd</code></td>
+<td>Chemin actuel</td>
+<td><code>pwd</code></td>
+<td class="category">Files</td>
+</tr>
+
+<tr>
+<td><code>rm</code></td>
+<td>Supprimer fichier</td>
+<td><code>rm file.txt</code></td>
+<td class="category">Files</td>
+</tr>
+
+<tr>
+<td><code>cp</code></td>
+<td>Copier fichier</td>
+<td><code>cp a.txt b.txt</code></td>
+<td class="category">Files</td>
+</tr>
+
+<tr>
+<td><code>mv</code></td>
+<td>Déplacer / renommer</td>
+<td><code>mv a.txt b.txt</code></td>
+<td class="category">Files</td>
+</tr>
+
+<tr>
+<td><code>ifconfig</code></td>
+<td>Infos réseau</td>
+<td><code>ifconfig</code></td>
+<td class="category">Network</td>
+</tr>
+
+<tr>
+<td><code>ip a</code></td>
+<td>Infos réseau moderne</td>
+<td><code>ip a</code></td>
+<td class="category">Network</td>
+</tr>
+
+<tr>
+<td><code>ping</code></td>
+<td>Tester connexion</td>
+<td><code>ping google.com</code></td>
+<td class="category">Network</td>
+</tr>
+
+<tr>
+<td><code>top</code></td>
+<td>Processus système</td>
+<td><code>top</code></td>
+<td class="category">System</td>
+</tr>
+
+<tr>
+<td><code>chmod</code></td>
+<td>Changer permissions</td>
+<td><code>chmod 777 file</code></td>
+<td class="category">System</td>
+</tr>
+
+<tr>
+<td><code>chown</code></td>
+<td>Changer propriétaire</td>
+<td><code>chown user file</code></td>
+<td class="category">System</td>
+</tr>
+
+<tr>
+<td><code>touch</code></td>
+<td>Créer un fichier vide</td>
+<td><code>touch file.txt</code></td>
+<td class="category">Files</td>
+</tr>
+
+<tr>
+<td><code>find</code></td>
+<td>Chercher un fichier</td>
+<td><code>find / -name file.txt</code></td>
+<td class="category">Files</td>
+</tr>
+
+<tr>
+<td><code>grep</code></td>
+<td>Chercher texte dans fichier</td>
+<td><code>grep "text" file.txt</code></td>
+<td class="category">Files</td>
+</tr>
+
+<tr>
+<td><code>head</code></td>
+<td>Afficher début fichier</td>
+<td><code>head file.txt</code></td>
+<td class="category">Files</td>
+</tr>
+
+<tr>
+<td><code>tail</code></td>
+<td>Afficher fin fichier</td>
+<td><code>tail -f log.txt</code></td>
+<td class="category">Files</td>
+</tr>
+
+<tr>
+<td><code>history</code></td>
+<td>Afficher historique commandes</td>
+<td><code>history</code></td>
+<td class="category">System</td>
+</tr>
+
+<tr>
+<td><code>clear</code></td>
+<td>Nettoyer terminal</td>
+<td><code>clear</code></td>
+<td class="category">System</td>
+</tr>
+
+<tr>
+<td><code>whoami</code></td>
+<td>Afficher utilisateur actuel</td>
+<td><code>whoami</code></td>
+<td class="category">System</td>
+</tr>
+
+<tr>
+<td><code>uname -a</code></td>
+<td>Infos système</td>
+<td><code>uname -a</code></td>
+<td class="category">System</td>
+</tr>
+
+<tr>
+<td><code>df -h</code></td>
+<td>Espace disque</td>
+<td><code>df -h</code></td>
+<td class="category">System</td>
+</tr>
+
+<tr>
+<td><code>du -h</code></td>
+<td>Taille fichiers</td>
+<td><code>du -h</code></td>
+<td class="category">System</td>
+</tr>
+
+<tr>
+<td><code>ps</code></td>
+<td>Voir processus</td>
+<td><code>ps aux</code></td>
+<td class="category">System</td>
+</tr>
+
+<tr>
+<td><code>kill</code></td>
+<td>Arrêter processus</td>
+<td><code>kill 1234</code></td>
+<td class="category">System</td>
+</tr>
+
+<tr>
+<td><code>apt update</code></td>
+<td>Mettre à jour liste paquets</td>
+<td><code>apt update</code></td>
+<td class="category">System</td>
+</tr>
+
+<tr>
+<td><code>apt upgrade</code></td>
+<td>Mettre à jour système</td>
+<td><code>apt upgrade</code></td>
+<td class="category">System</td>
+</tr>
+
+<tr>
+<td><code>wget</code></td>
+<td>Télécharger fichier</td>
+<td><code>wget url</code></td>
+<td class="category">Network</td>
+</tr>
+
+<tr>
+<td><code>curl</code></td>
+<td>Requête HTTP</td>
+<td><code>curl google.com</code></td>
+<td class="category">Network</td>
+</tr>
+
+<tr>
+<td><code>netstat</code></td>
+<td>Connexions réseau</td>
+<td><code>netstat -tuln</code></td>
+<td class="category">Network</td>
+</tr>
+
+<tr>
+<td><code>ssh</code></td>
+<td>Connexion distante</td>
+<td><code>ssh user@ip</code></td>
+<td class="category">Network</td>
+</tr>
+
+<tr>
+<td><code>scp</code></td>
+<td>Copie via SSH</td>
+<td><code>scp file user@ip:/path</code></td>
+<td class="category">Network</td>
+</tr>
+
+<tr>
+<td><code>tar</code></td>
+<td>Compresser/décompresser</td>
+<td><code>tar -xvf file.tar</code></td>
+<td class="category">Files</td>
+</tr>
+
+<tr>
+<td><code>zip</code></td>
+<td>Compresser fichier</td>
+<td><code>zip file.zip file.txt</code></td>
+<td class="category">Files</td>
+</tr>
+
+<tr>
+<td><code>unzip</code></td>
+<td>Décompresser zip</td>
+<td><code>unzip file.zip</code></td>
+<td class="category">Files</td>
+</tr>
+
+</table>
+
+<h1>💣 Commandes Hacking / Pentest</h1>
+
+<table>
+<tr>
+    <th>Commande</th>
+    <th>Description</th>
+    <th>Exemple</th>
+    <th>Catégorie</th>
+</tr>
+
+<tr>
+<td><code>nmap</code></td>
+<td>Scanner les ports et services</td>
+<td><code>nmap -sV 192.168.1.1</code></td>
+<td class="category">Scanning</td>
+</tr>
+
+<tr>
+<td><code>nmap -A</code></td>
+<td>Scan avancé (OS + services)</td>
+<td><code>nmap -A target</code></td>
+<td class="category">Scanning</td>
+</tr>
+
+<tr>
+<td><code>nmap -p-</code></td>
+<td>Scanner tous les ports</td>
+<td><code>nmap -p- target</code></td>
+<td class="category">Scanning</td>
+</tr>
+
+<tr>
+<td><code>msfconsole</code></td>
+<td>Lancer Metasploit</td>
+<td><code>msfconsole</code></td>
+<td class="category">Exploitation</td>
+</tr>
+
+<tr>
+<td><code>search</code></td>
+<td>Chercher exploit dans Metasploit</td>
+<td><code>search vsftpd</code></td>
+<td class="category">Exploitation</td>
+</tr>
+
+<tr>
+<td><code>use</code></td>
+<td>Utiliser un module</td>
+<td><code>use exploit/unix/ftp/vsftpd_234_backdoor</code></td>
+<td class="category">Exploitation</td>
+</tr>
+
+<tr>
+<td><code>set RHOST</code></td>
+<td>Définir IP cible</td>
+<td><code>set RHOST 192.168.1.5</code></td>
+<td class="category">Exploitation</td>
+</tr>
+
+<tr>
+<td><code>set LHOST</code></td>
+<td>Définir IP attaquant</td>
+<td><code>set LHOST 192.168.1.10</code></td>
+<td class="category">Exploitation</td>
+</tr>
+
+<tr>
+<td><code>exploit</code></td>
+<td>Lancer attaque</td>
+<td><code>exploit</code></td>
+<td class="category">Exploitation</td>
+</tr>
+
+<tr>
+<td><code>whoami</code></td>
+<td>Voir utilisateur après accès</td>
+<td><code>whoami</code></td>
+<td class="category">Post-Exploitation</td>
+</tr>
+
+<tr>
+<td><code>pwd</code></td>
+<td>Position actuelle</td>
+<td><code>pwd</code></td>
+<td class="category">Post-Exploitation</td>
+</tr>
+
+<tr>
+<td><code>ls</code></td>
+<td>Lister fichiers</td>
+<td><code>ls</code></td>
+<td class="category">Post-Exploitation</td>
+</tr>
+
+<tr>
+<td><code>cat</code></td>
+<td>Lire fichier</td>
+<td><code>cat /etc/passwd</code></td>
+<td class="category">Post-Exploitation</td>
+</tr>
+
+<tr>
+<td><code>hydra</code></td>
+<td>Bruteforce login</td>
+<td><code>hydra -l admin -P pass.txt ssh://ip</code></td>
+<td class="category">Bruteforce</td>
+</tr>
+
+<tr>
+<td><code>john</code></td>
+<td>Cracker mots de passe</td>
+<td><code>john hash.txt</code></td>
+<td class="category">Cracking</td>
+</tr>
+
+<tr>
+<td><code>hashcat</code></td>
+<td>Cracking GPU</td>
+<td><code>hashcat -m 0 hash.txt wordlist</code></td>
+<td class="category">Cracking</td>
+</tr>
+
+<tr>
+<td><code>sqlmap</code></td>
+<td>Tester SQL Injection</td>
+<td><code>sqlmap -u "url"</code></td>
+<td class="category">Web</td>
+</tr>
+
+<tr>
+<td><code>nikto</code></td>
+<td>Scanner vuln web</td>
+<td><code>nikto -h http://target</code></td>
+<td class="category">Web</td>
+</tr>
+
+<tr>
+<td><code>dirb</code></td>
+<td>Découvrir dossiers web</td>
+<td><code>dirb http://target</code></td>
+<td class="category">Web</td>
+</tr>
+
+<tr>
+<td><code>wireshark</code></td>
+<td>Analyser trafic réseau</td>
+<td><code>wireshark</code></td>
+<td class="category">Network</td>
+</tr>
+
+</table>
+</div>
+
+<script>
+function searchTable() {
+    let input = document.getElementById("search").value.toLowerCase();
+    let rows = document.querySelectorAll("#table tr");
+
+    rows.forEach((row, index) => {
+        if (index === 0) return;
+        let text = row.innerText.toLowerCase();
+        row.style.display = text.includes(input) ? "" : "none";
+    });
+}
+
+function toggleDark() {
+    document.body.classList.toggle("dark");
+}
+</script>
+
+</body>
+</html>

